@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Online Order - Tasty Bites</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Tasty Bites</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<section class="order-page">
+
+    <div class="order-overlay">
+
+        <div class="order-form-box">
+
+            <h2>Online Food Ordering</h2>
+
+            <p>
+                Enjoy delicious food delivered to your doorstep
+            </p>
+
+            <form action="/order" method="POST">
+
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Enter Your Name"
+                    required
+                >
+
+                <input 
+                    type="text" 
+                    name="food" 
+                    placeholder="Enter Food Item"
+                    required
+                >
+
+                <input 
+                    type="number" 
+                    name="quantity" 
+                    placeholder="Enter Quantity"
+                    required
+                >
+
+                <textarea 
+                    name="address"
+                    rows="4"
+                    placeholder="Enter Delivery Address"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Tasty Bites Restaurant</p>
+
+</footer>
+
+</body>
+
+</html>

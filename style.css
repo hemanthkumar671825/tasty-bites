@@ -1,0 +1,527 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8f0;
+}
+
+header{
+    background:#b22222;
+    color:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.hero{
+    height:90vh;
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-text h2{
+    font-size:50px;
+}
+
+.hero-text p{
+    font-size:24px;
+    margin-top:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:orange;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:darkorange;
+}
+
+.foods{
+    padding:50px;
+    text-align:center;
+}
+
+.food-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.card h3{
+    margin-top:10px;
+}
+
+.page{
+    padding:50px;
+    text-align:center;
+}
+
+.service-box{
+    background:white;
+    margin:20px auto;
+    width:300px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+form{
+    width:300px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:10px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+    .hero-text h2{
+        font-size:35px;
+    }
+
+    .food-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+/* SERVICES PAGE DESIGN */
+
+.service-hero{
+    height:50vh;
+
+    background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+
+    padding:40px;
+
+    border-radius:10px;
+}
+
+.overlay h2{
+    font-size:50px;
+
+    margin-bottom:10px;
+}
+
+.overlay p{
+    font-size:20px;
+}
+
+.services-container{
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    padding:50px;
+}
+
+.service-card{
+    width:280px;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    transition:0.3s;
+
+    text-align:center;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card img{
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+}
+
+.service-card h3{
+    margin-top:15px;
+
+    color:#b22222;
+}
+
+.service-card p{
+    padding:15px;
+}
+
+.service-card button{
+    margin-bottom:20px;
+}
+/* ORDER PAGE */
+
+.order-page{
+
+    min-height:100vh;
+
+    background:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.order-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+}
+
+.order-form-box{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.order-form-box h2{
+
+    color:#b22222;
+
+    margin-bottom:10px;
+}
+
+.order-form-box p{
+
+    margin-bottom:20px;
+
+    color:gray;
+}
+
+.order-form-box input,
+.order-form-box textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    font-size:16px;
+}
+
+.order-form-box button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#ff9800;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.order-form-box button:hover{
+
+    background:#e68900;
+}
+/* DELIVERY PAGE */
+
+.delivery-page{
+
+    min-height:100vh;
+
+    background:url('https://images.unsplash.com/photo-1526367790999-0150786686a2?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.delivery-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.delivery-form-box{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+/* BOOKING PAGE */
+
+.booking-page{
+
+    min-height:100vh;
+
+    background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.booking-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.booking-form-box{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+/* CATERING PAGE */
+
+.catering-page{
+
+    min-height:100vh;
+
+    background:url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1200');
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.catering-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.catering-form-box{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+/* COMMON FORM STYLE */
+
+.delivery-form-box input,
+.delivery-form-box textarea,
+.booking-form-box input,
+.catering-form-box input,
+.catering-form-box textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    font-size:16px;
+}
+
+.delivery-form-box button,
+.booking-form-box button,
+.catering-form-box button{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#ff9800;
+
+    color:white;
+
+    border:none;
+
+    border-radius:5px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}

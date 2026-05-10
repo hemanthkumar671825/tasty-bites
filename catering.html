@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catering Service - Tasty Bites</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Tasty Bites</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<section class="catering-page">
+
+    <div class="catering-overlay">
+
+        <div class="catering-form-box">
+
+            <h2>Catering Service</h2>
+
+            <p>
+                Professional catering for events and celebrations
+            </p>
+
+            <form id="cateringForm">
+
+                <input 
+                    type="text"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    required
+                >
+
+                <input 
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter Phone Number"
+                    required
+                >
+
+                <input 
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email Address"
+                    required
+                >
+
+                <input 
+                    type="text"
+                    id="event"
+                    placeholder="Event Type"
+                    required
+                >
+
+                <input 
+                    type="number"
+                    id="guests"
+                    placeholder="Number of Guests"
+                    required
+                >
+
+                <input 
+                    type="date"
+                    id="date"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    rows="4"
+                    placeholder="Additional Requirements"
+                ></textarea>
+
+                <button 
+                    type="button"
+                    onclick="generateCateringBill()"
+                >
+                    Generate Bill
+                </button>
+
+            </form>
+
+            <div 
+                id="billBox"
+                style="display:none; margin-top:20px;"
+            >
+
+                <h3>Catering Bill Details</h3>
+
+                <p id="billDetails"></p>
+
+                <button onclick="confirmCateringPayment()">
+
+                    Pay & Confirm Order
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Tasty Bites Restaurant</p>
+
+</footer>
+
+<script>
+
+function generateCateringBill(){
+
+    let name = document.getElementById("name").value;
+
+    let phone = document.getElementById("phone").value;
+
+    let email = document.getElementById("email").value;
+
+    let event = document.getElementById("event").value;
+
+    let guests = document.getElementById("guests").value;
+
+    let date = document.getElementById("date").value;
+
+    let amountPerGuest = 500;
+
+    let totalAmount = guests * amountPerGuest;
+
+    document.getElementById("billBox").style.display = "block";
+
+    document.getElementById("billDetails").innerHTML =
+
+    `
+    Name: ${name} <br><br>
+
+    Phone: ${phone} <br><br>
+
+    Email: ${email} <br><br>
+
+    Event Type: ${event} <br><br>
+
+    Event Date: ${date} <br><br>
+
+    Number of Guests: ${guests} <br><br>
+
+    Amount Per Guest: ₹500 <br><br>
+
+    Total Bill Amount: ₹${totalAmount}
+    `;
+}
+
+function confirmCateringPayment(){
+
+    alert("Payment Successful! Catering Order Confirmed.");
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Online Order | Tasty Bites</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
-    <title>Online Order - Tasty Bites</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
@@ -17,81 +19,247 @@
 
 <header>
 
-    <h1>Tasty Bites</h1>
+<h1>Tasty Bites</h1>
 
-    <nav>
+<nav>
 
-        <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-        <a href="about.html">About</a>
+<a href="about.html">About</a>
 
-        <a href="services.html">Services</a>
+<a href="services.html">Services</a>
 
-        <a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a>
 
-    </nav>
+</nav>
 
 </header>
 
-<section class="order-page">
+<section class="menu-banner">
 
-    <div class="order-overlay">
+<h2>Delicious Food Menu</h2>
 
-        <div class="order-form-box">
-
-            <h2>Online Food Ordering</h2>
-
-            <p>
-                Enjoy delicious food delivered to your doorstep
-            </p>
-
-            <form action="/order" method="POST">
-
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Enter Your Name"
-                    required
-                >
-
-                <input 
-                    type="text" 
-                    name="food" 
-                    placeholder="Enter Food Item"
-                    required
-                >
-
-                <input 
-                    type="number" 
-                    name="quantity" 
-                    placeholder="Enter Quantity"
-                    required
-                >
-
-                <textarea 
-                    name="address"
-                    rows="4"
-                    placeholder="Enter Delivery Address"
-                    required
-                ></textarea>
-
-                <button type="submit">
-                    Place Order
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
+<p>Fresh • Hot • Tasty • Delivered Fast</p>
 
 </section>
 
+<section class="menu-container">
+
+<!-- Chicken Briyani -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1563379091339-03246963d29c?w=600">
+
+<h3>Chicken Briyani</h3>
+
+<p>Traditional Dum Briyani</p>
+
+<h4>₹250</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1" min="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+<!-- Pizza -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600">
+
+<h3>Pizza</h3>
+
+<p>Cheese Burst Pizza</p>
+
+<h4>₹200</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+<!-- Burger -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600">
+
+<h3>Burger</h3>
+
+<p>Chicken Burger</p>
+
+<h4>₹150</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+<!-- Noodles -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600">
+
+<h3>Noodles</h3>
+
+<p>Chinese Hakka Noodles</p>
+
+<h4>₹180</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+<!-- Fried Rice -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600">
+
+<h3>Fried Rice</h3>
+
+<p>Veg Fried Rice</p>
+
+<h4>₹170</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+<!-- Shawarma -->
+
+<div class="food-card">
+
+<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600">
+
+<h3>Shawarma</h3>
+
+<p>Special Chicken Shawarma</p>
+
+<h4>₹220</h4>
+
+<div class="qty-box">
+
+<button>-</button>
+
+<input type="number" value="1">
+
+<button>+</button>
+
+</div>
+
+<button class="cart-btn">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Add to Cart
+
+</button>
+
+</div>
+
+</section>
+
+<div class="view-cart">
+
+<button id="viewCartBtn">
+
+🛒 View Cart
+
+</button>
+
+</div>
+
 <footer>
 
-    <p>© 2026 Tasty Bites Restaurant</p>
+<p>
+
+© 2026 Tasty Bites Restaurant
+
+</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 

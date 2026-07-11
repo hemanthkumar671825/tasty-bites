@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,254 +10,853 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<header>
+<!-- ================= HEADER ================= -->
 
-<h1>Tasty Bites</h1>
+<header class="header">
 
-<nav>
+<div class="logo">
 
-<a href="index.html">Home</a>
+<i class="fa-solid fa-utensils"></i>
 
-<a href="about.html">About</a>
-
-<a href="services.html">Services</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</header>
-
-<section class="menu-banner">
-
-<h2>Delicious Food Menu</h2>
-
-<p>Fresh • Hot • Tasty • Delivered Fast</p>
-
-</section>
-
-<section class="menu-container">
-
-<!-- Chicken Briyani -->
-
-<div class="food-card">
-
-<img src="https://images.unsplash.com/photo-1563379091339-03246963d29c?w=600">
-
-<h3>Chicken Briyani</h3>
-
-<p>Traditional Dum Briyani</p>
-
-<h4>₹250</h4>
-
-<div class="qty-box">
-
-<button>-</button>
-
-<input type="number" value="1" min="1">
-
-<button>+</button>
+<h1>Tasty <span>Bites</span></h1>
 
 </div>
 
-<button class="cart-btn">
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="cart-icon">
+
+<button id="cartButton">
 
 <i class="fa-solid fa-cart-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="order-hero">
+
+<div class="hero-overlay">
+
+<h1>Order Delicious Food Online</h1>
+
+<p>
+
+Fresh Ingredients • Fast Delivery • Best Taste
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchFood"
+placeholder="Search your favourite food...">
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORY ================= -->
+
+<section class="category-section">
+
+<h2>Browse Categories</h2>
+
+<p>Select your favourite food category</p>
+
+<div class="categories">
+
+<button class="category active" data-filter="all">
+🍗 All
+</button>
+
+<button class="category" data-filter="biryani">
+🍛 Biryani
+</button>
+
+<button class="category" data-filter="pizza">
+🍕 Pizza
+</button>
+
+<button class="category" data-filter="burger">
+🍔 Burgers & Shawarma
+</button>
+
+<button class="category" data-filter="chinese">
+🍜 Chinese
+</button>
+
+<button class="category" data-filter="south">
+🥘 South Indian
+</button>
+
+<button class="category" data-filter="dessert">
+🍰 Desserts
+</button>
+
+<button class="category" data-filter="drink">
+🥤 Drinks
+</button>
+
+</div>
+
+</section>
+<!-- ================= POPULAR ITEMS ================= -->
+
+<section class="popular-title">
+
+<h2>🔥 Popular Dishes</h2>
+
+<p>
+
+Our most loved dishes selected by customers
+
+</p>
+
+</section>
+
+<!-- ================= FOOD MENU ================= -->
+
+<section class="food-grid">
+
+<!-- Chicken Biryani -->
+
+<div class="food-card" data-category="biryani">
+
+
+
+<div class="ribbon">
+
+Best Seller
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?w=800"
+alt="Chicken Biryani">
+
+<div class="food-content">
+
+<h3>Chicken Biryani</h3>
+
+<p>
+
+Traditional Dum Biryani with spicy chicken pieces.
+
+</p>
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+<span>(4.9)</span>
+
+</div>
+
+<div class="price-row">
+
+<h4>₹130</h4>
+
+<span class="nonveg">
+
+Non Veg
+
+</span>
+
+</div>
+
+<div class="quantity">
+
+<button class="minus">-</button>
+
+<input
+type="number"
+value="1"
+min="1">
+
+<button class="plus">+</button>
+
+</div>
+
+<button class="add-cart">
+
+<i class="fa-solid fa-cart-plus"></i>
 
 Add to Cart
 
 </button>
+
+</div>
 
 </div>
 
 <!-- Pizza -->
+<div class="food-card" data-category="pizza">
 
-<div class="food-card">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800"
+alt="Pizza">
 
-<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600">
+<div class="food-content">
 
-<h3>Pizza</h3>
+<h3>Cheese Pizza</h3>
 
-<p>Cheese Burst Pizza</p>
+<p>
+Loaded with mozzarella cheese and vegetables.
+</p>
 
-<h4>₹200</h4>
-
-<div class="qty-box">
-
-<button>-</button>
-
-<input type="number" value="1">
-
-<button>+</button>
-
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(4.7)</span>
 </div>
 
-<button class="cart-btn">
+<div class="price-row">
+<h4>₹220</h4>
+<span class="veg">Veg</span>
+</div>
 
-<i class="fa-solid fa-cart-shopping"></i>
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
 
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
 Add to Cart
-
 </button>
 
 </div>
 
+</div>
+<!-- Burger -->
 <!-- Burger -->
 
-<div class="food-card">
+<div class="food-card" data-category="burger">
 
-<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800"
+alt="Burger">
 
-<h3>Burger</h3>
+<div class="food-content">
 
-<p>Chicken Burger</p>
+<h3>Chicken Burger</h3>
 
-<h4>₹150</h4>
+<p>
+Juicy chicken burger with cheese and lettuce.
+</p>
 
-<div class="qty-box">
-
-<button>-</button>
-
-<input type="number" value="1">
-
-<button>+</button>
-
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(4.8)</span>
 </div>
 
-<button class="cart-btn">
+<div class="price-row">
+<h4>₹120</h4>
+<span class="nonveg">Non Veg</span>
+</div>
 
-<i class="fa-solid fa-cart-shopping"></i>
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
 
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
 Add to Cart
-
 </button>
 
 </div>
-
-<!-- Noodles -->
-
-<div class="food-card">
-
-<img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600">
-
-<h3>Noodles</h3>
-
-<p>Chinese Hakka Noodles</p>
-
-<h4>₹180</h4>
-
-<div class="qty-box">
-
-<button>-</button>
-
-<input type="number" value="1">
-
-<button>+</button>
-
-</div>
-
-<button class="cart-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Add to Cart
-
-</button>
-
-</div>
-
-<!-- Fried Rice -->
-
-<div class="food-card">
-
-<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600">
-
-<h3>Fried Rice</h3>
-
-<p>Veg Fried Rice</p>
-
-<h4>₹170</h4>
-
-<div class="qty-box">
-
-<button>-</button>
-
-<input type="number" value="1">
-
-<button>+</button>
-
-</div>
-
-<button class="cart-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Add to Cart
-
-</button>
 
 </div>
 
 <!-- Shawarma -->
 
-<div class="food-card">
+<!-- Shawarma -->
 
-<img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600">
+<div class="food-card" data-category="burger">
 
-<h3>Shawarma</h3>
+<img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800"
+alt="Shawarma">
 
-<p>Special Chicken Shawarma</p>
+<div class="food-content">
 
-<h4>₹220</h4>
+<h3>Chicken Shawarma</h3>
 
-<div class="qty-box">
+<p>
+Arabic style grilled chicken wrapped with garlic sauce.
+</p>
 
-<button>-</button>
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(4.9)</span>
+</div>
 
-<input type="number" value="1">
+<div class="price-row">
+<h4>₹120</h4>
+<span class="nonveg">Non Veg</span>
+</div>
 
-<button>+</button>
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
 
 </div>
 
-<button class="cart-btn">
+</div>
+<!-- Veg Fried Rice -->
 
-<i class="fa-solid fa-cart-shopping"></i>
+<!-- Veg Fried Rice -->
 
+<div class="food-card" data-category="chinese">
+
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800"
+alt="Fried Rice">
+
+<div class="food-content">
+
+<h3>Veg Fried Rice</h3>
+
+<p>
+Healthy fried rice with fresh vegetables.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(4.6)</span>
+</div>
+
+<div class="price-row">
+<h4>₹100</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
 Add to Cart
-
 </button>
+
+</div>
+
+</div>
+
+<!-- Noodles -->
+
+<!-- Noodles -->
+
+<div class="food-card" data-category="chinese">
+
+<img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800"
+alt="Noodles">
+
+<div class="food-content">
+
+<h3>Hakka Noodles</h3>
+
+<p>
+Chinese style noodles tossed with vegetables.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(4.7)</span>
+</div>
+
+<div class="price-row">
+<h4>₹190</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Masala Dosa -->
+
+<!-- Masala Dosa -->
+
+<div class="food-card" data-category="south">
+
+<img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800"
+alt="Masala Dosa">
+
+<div class="food-content">
+
+<h3>Masala Dosa</h3>
+
+<p>
+Crispy dosa served with sambar and coconut chutney.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(4.9)</span>
+</div>
+
+<div class="price-row">
+<h4>₹110</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Idli -->
+
+<!-- Idli -->
+
+<div class="food-card" data-category="south">
+
+<img src="https://images.unsplash.com/photo-1630383249896-424e482df921?w=800"
+alt="Idli">
+
+<div class="food-content">
+
+<h3>Idli</h3>
+
+<p>
+Soft steamed idli served with coconut chutney and hot sambar.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(4.6)</span>
+</div>
+
+<div class="price-row">
+<h4>₹20</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Paneer Butter Masala -->
+
+<!-- Paneer Butter Masala -->
+
+<div class="food-card" data-category="south">
+
+<img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=800"
+alt="Paneer Butter Masala">
+
+<div class="food-content">
+
+<h3>Paneer Butter Masala</h3>
+
+<p>
+Rich creamy paneer curry served with butter naan.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(4.8)</span>
+</div>
+
+<div class="price-row">
+<h4>₹170</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Chocolate Cake -->
+
+<!-- Chocolate Cake -->
+
+<div class="food-card" data-category="dessert">
+
+<div class="ribbon">
+Today's Special
+</div>
+
+<img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800"
+alt="Chocolate Cake">
+
+<div class="food-content">
+
+<h3>Chocolate Cake</h3>
+
+<p>
+Moist chocolate cake topped with premium chocolate.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(5.0)</span>
+</div>
+
+<div class="price-row">
+<h4>₹160</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Ice Cream -->
+
+<!-- Ice Cream -->
+
+<div class="food-card" data-category="dessert">
+
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800"
+alt="Ice Cream">
+
+<div class="food-content">
+
+<h3>Vanilla Ice Cream</h3>
+
+<p>
+Premium vanilla ice cream with chocolate syrup.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐☆
+<span>(4.7)</span>
+</div>
+
+<div class="price-row">
+<h4>₹90</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Fresh Juice -->
+
+<!-- Fresh Juice -->
+
+<div class="food-card" data-category="drink">
+
+<img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800"
+alt="Fresh Juice">
+
+<div class="food-content">
+
+<h3>Fresh Orange Juice</h3>
+
+<p>
+100% fresh orange juice without preservatives.
+</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+<span>(4.9)</span>
+</div>
+
+<div class="price-row">
+<h4>₹50</h4>
+<span class="veg">Veg</span>
+</div>
+
+<div class="quantity">
+<button class="minus">-</button>
+<input type="number" value="1" min="1">
+<button class="plus">+</button>
+</div>
+
+<button class="add-cart">
+<i class="fa-solid fa-cart-plus"></i>
+Add to Cart
+</button>
+
+</div>
 
 </div>
 
 </section>
 
-<div class="view-cart">
+<!-- ================= SHOPPING CART ================= -->
 
-<button id="viewCartBtn">
+<div class="cart-sidebar" id="cartSidebar">
 
-🛒 View Cart
+<div class="cart-header">
+
+<h2>
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Your Cart
+
+</h2>
+
+<button id="closeCart">
+
+<i class="fa-solid fa-xmark"></i>
 
 </button>
 
 </div>
 
+<div id="cartItems">
+
+<p class="empty-cart">
+
+Your cart is empty.
+
+</p>
+
+</div>
+
+<div class="cart-summary">
+
+<div class="summary-row">
+
+<span>Subtotal</span>
+
+<span id="subtotal">₹0</span>
+
+</div>
+
+<div class="summary-row">
+
+<span>GST (5%)</span>
+
+<span id="gst">₹0</span>
+
+</div>
+
+<hr>
+
+<div class="summary-row total">
+
+<strong>Total</strong>
+
+<strong id="total">₹0</strong>
+
+</div>
+
+<input
+type="text"
+id="coupon"
+placeholder="Enter Coupon Code">
+
+<button class="apply-btn">
+
+Apply Coupon
+
+</button>
+
+<button class="checkout-btn">
+
+Proceed to Checkout
+
+</button>
+
+</div>
+
+</div>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<!-- ================= ORDER CONFIRMATION MODAL ================= -->
+
+<div class="order-modal" id="orderModal">
+
+    <div class="order-modal-box">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Order Confirmed!</h2>
+
+        <p>
+            Thank you for choosing
+            <strong>Tasty Bites Restaurant</strong>.
+        </p>
+
+        <div class="order-info">
+
+            <div class="info-row">
+                <span>Order ID</span>
+                <strong id="orderId">TB000001</strong>
+            </div>
+
+            <div class="info-row">
+                 <span>Estimated Time</span>
+                 <strong>30 - 40 Minutes</strong>
+             </div>
+
+            <div class="info-row">
+                 <span>Order Date</span>
+                 <strong id="orderDate"></strong>
+             </div>
+
+            <div class="info-row">
+                 <span>Order Time</span>
+                 <strong id="orderTime"></strong>
+             </div>
+            <div class="info-row">
+                <span>Status</span>
+                <strong id="orderStatus">Preparing Your Order</strong>
+            </div>
+
+        </div>
+
+        <div class="thank-message">
+
+    We appreciate your order ❤️
+
+    <br><br>
+
+    Our chefs have started preparing your meal.
+
+</div>
+
+        <button id="continueShopping">
+
+         <i class="fa-solid fa-bag-shopping"></i>
+
+         Continue Shopping
+
+         </button>
+    </div>
+
+</div>
+
 <footer>
+
+<div class="footer-content">
+
+<h2>Tasty Bites</h2>
 
 <p>
 
-© 2026 Tasty Bites Restaurant
+Fresh Food • Fast Delivery • Great Taste
 
 </p>
+
+<p>
+
+© 2026 Tasty Bites Restaurant. All Rights Reserved.
+
+</p>
+
+</div>
 
 </footer>
 

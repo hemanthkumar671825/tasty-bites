@@ -772,6 +772,147 @@ Proceed to Checkout
 
 <div class="cart-overlay" id="cartOverlay"></div>
 
+<!-- ================= PAYMENT MODAL ================= -->
+
+<div class="payment-modal" id="paymentModal">
+
+    <div class="payment-box">
+
+        <h2>Select Payment Method</h2>
+
+        <p>
+
+            Please choose your preferred payment option.
+
+        </p>
+
+        <div class="payment-options">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Cash"
+                    checked
+                >
+
+                Cash
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="UPI"
+                >
+
+                UPI
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Credit / Debit Card"
+                >
+
+                Credit / Debit Card
+
+            </label>
+
+        </div>
+
+        <button id="continuePayment">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= UPI PAYMENT MODAL ================= -->
+
+<div class="upi-modal" id="upiModal">
+
+    <div class="upi-box">
+
+        <div class="upi-logo">
+
+            <i class="fa-solid fa-qrcode"></i>
+
+        </div>
+
+        <h2>Complete UPI Payment</h2>
+
+        <p>
+
+            Scan the QR Code below using any UPI App.
+
+        </p>
+
+        <div class="upi-amount">
+
+            Amount to Pay
+
+            <strong id="upiAmount">
+
+                ₹0
+
+            </strong>
+
+        </div>
+
+        <div class="upi-qr">
+
+            <img
+            src="images/payment-qr.png"
+            alt="UPI QR Code">
+
+        </div>
+
+        <div class="upi-id">
+
+            <span>UPI ID</span>
+
+            <strong>
+
+                tastybites@upi
+
+            </strong>
+
+        </div>
+
+        <div class="upi-transaction">
+
+            <span>Transaction ID</span>
+
+            <strong id="transactionId">
+
+                TXN000000000
+
+            </strong>
+
+        </div>
+
+        <button id="paymentCompleted">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Payment Completed
+
+        </button>
+
+    </div>
+
+</div>
+
 <!-- ================= ORDER CONFIRMATION MODAL ================= -->
 
 <div class="order-modal" id="orderModal">
@@ -800,6 +941,13 @@ Proceed to Checkout
                  <span>Estimated Time</span>
                  <strong>30 - 40 Minutes</strong>
              </div>
+
+             <div class="info-row">
+    <span>Payment Method</span>
+    <strong id="paymentMethod">
+        Cash
+    </strong>
+</div>
 
             <div class="info-row">
                  <span>Order Date</span>

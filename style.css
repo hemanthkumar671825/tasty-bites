@@ -1512,3 +1512,655 @@ footer{
     line-height:1.6;
 
 }
+/*=========================================================
+        HOME DELIVERY PAGE
+=========================================================*/
+
+.delivery-page{
+
+    min-height:100vh;
+
+    background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600") center/cover no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 20px 60px;
+
+}
+
+.delivery-overlay{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.delivery-form-box{
+
+    width:500px;
+
+    max-width:100%;
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.delivery-form-box h2{
+
+    text-align:center;
+
+    color:#b22222;
+
+    margin-bottom:10px;
+
+}
+
+.delivery-form-box p{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+}
+
+#deliveryForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+#deliveryForm input:not([type="radio"]),
+#deliveryForm textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#deliveryForm input:focus,
+#deliveryForm textarea:focus{
+
+    border-color:#b22222;
+
+    box-shadow:0 0 8px rgba(178,34,34,.2);
+
+}
+
+.payment-method{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin:20px 0;
+
+}
+
+.payment-method label{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    gap:12px;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+}
+
+.payment-method input[type="radio"]{
+
+    width:auto;
+
+    margin:0;
+
+    accent-color:#b22222;
+
+}
+
+.delivery-btn{
+
+    background:#b22222;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delivery-btn:hover{
+
+    background:#8b0000;
+
+    transform:translateY(-2px);
+
+}
+
+@media(max-width:768px){
+
+.delivery-form-box{
+
+    padding:25px;
+
+}
+
+}
+/*=========================================================
+        DELIVERY CONFIRMATION MODAL
+=========================================================*/
+
+.delivery-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:5000;
+
+}
+
+.delivery-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.delivery-modal-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:popup .35s ease;
+
+}
+
+.delivery-info{
+
+    background:#f7f7f7;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin:20px 0;
+
+}
+
+#backHome{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#b22222;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#backHome:hover{
+
+    background:#8b0000;
+
+}
+/*=========================================================
+        PAYMENT MODAL
+=========================================================*/
+
+.payment-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:6000;
+
+}
+
+.payment-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.payment-box{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+    animation:popup .35s ease;
+
+}
+
+.payment-box h2{
+
+    color:#b22222;
+
+    margin-bottom:12px;
+
+}
+
+.payment-box p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+
+}
+
+.payment-options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.payment-options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:17px;
+
+    font-weight:500;
+
+}
+
+.payment-options label:hover{
+
+    border-color:#b22222;
+
+    background:#fff5f5;
+
+}
+
+.payment-options input[type="radio"]{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#b22222;
+
+}
+
+#continuePayment{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#b22222,#ff6b35);
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#continuePayment:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(178,34,34,.35);
+
+}
+
+/*=========================================================
+                UPI PAYMENT MODAL
+=========================================================*/
+
+.upi-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.70);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:7000;
+
+}
+
+.upi-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.upi-box{
+
+    width:430px;
+
+    max-width:92%;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+    animation:popup .35s ease;
+
+}
+
+.upi-logo{
+
+    font-size:55px;
+
+    color:#6a1b9a;
+
+    margin-bottom:15px;
+
+}
+
+.upi-box h2{
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.upi-box p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.upi-amount{
+
+    background:#f8f8f8;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+}
+
+.upi-amount strong{
+
+    display:block;
+
+    margin-top:6px;
+
+    font-size:28px;
+
+    color:#b22222;
+
+}
+
+.upi-qr{
+
+    width:170px;
+
+    height:170px;
+
+    margin:20px auto;
+
+    border:2px dashed #ccc;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.upi-qr img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.upi-id,
+.upi-transaction{
+
+    background:#fafafa;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    margin-top:12px;
+
+}
+
+.upi-id span,
+.upi-transaction span{
+
+    display:block;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+.upi-id strong,
+.upi-transaction strong{
+
+    color:#222;
+
+    font-size:18px;
+
+}
+
+#paymentCompleted{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#28a745,#0f9d58);
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#paymentCompleted:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(40,167,69,.35);
+
+}

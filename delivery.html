@@ -9,6 +9,10 @@
 
     <title>Home Delivery - Tasty Bites</title>
 
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -43,34 +47,69 @@
 
             <p>Fast and safe delivery to your doorstep</p>
 
-            <form action="/delivery" method="POST">
+            <form id="deliveryForm">
 
-                <input 
-                    type="text"
-                    name="name"
-                    placeholder="Enter Your Name"
-                    required
-                >
+    <input
+        type="text"
+        id="customerName"
+        placeholder="👤 Customer Name"
+        required
+    >
 
-                <input 
-                    type="text"
-                    name="phone"
-                    placeholder="Phone Number"
-                    required
-                >
+    <input
+        type="tel"
+        id="phone"
+        placeholder="📞 Mobile Number"
+        maxlength="10"
+        required
+    >
 
-                <textarea
-                    name="address"
-                    rows="4"
-                    placeholder="Enter Delivery Address"
-                    required
-                ></textarea>
+    <textarea
+        id="address"
+        rows="4"
+        placeholder="📍 Enter Delivery Address"
+        required
+    ></textarea>
 
-                <button type="submit">
-                    Submit Delivery
-                </button>
+    <h3>Payment Method</h3>
 
-            </form>
+    <div class="payment-method">
+
+        <label>
+            <input
+                type="radio"
+                name="payment"
+                value="Cash on Delivery"
+                checked
+            >
+            Cash on Delivery
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="payment"
+                value="UPI"
+            >
+            UPI
+        </label>
+
+        <label>
+            <input
+                type="radio"
+                name="payment"
+                value="Credit/Debit Card"
+            >
+            Credit / Debit Card
+        </label>
+
+    </div>
+
+    <button type="submit" class="delivery-btn">
+        🚚 Place Door Delivery
+    </button>
+
+</form>
 
         </div>
 
@@ -78,11 +117,84 @@
 
 </section>
 
+<!-- ================= DELIVERY CONFIRMATION MODAL ================= -->
+
+<div class="delivery-modal" id="deliveryModal">
+
+    <div class="delivery-modal-box">
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <h2>Door Delivery Confirmed!</h2>
+
+        <p>
+
+            Thank you for choosing
+            <strong>Tasty Bites Restaurant</strong>
+
+        </p>
+
+        <div class="delivery-info">
+
+            <div class="info-row">
+
+                <span>Delivery No.</span>
+
+                <strong id="deliveryId">DL000001</strong>
+
+            </div>
+
+            <div class="info-row">
+
+                <span>Estimated Time</span>
+
+                <strong>30 - 45 Minutes</strong>
+
+            </div>
+
+            <div class="info-row">
+
+                <span>Payment</span>
+
+                <strong id="paymentMode">Cash on Delivery</strong>
+
+            </div>
+
+        </div>
+
+        <div class="thank-message">
+
+            🚚 Your delivery request has been received.
+
+            <br><br>
+
+            Our delivery partner will reach you soon.
+
+        </div>
+
+        <button id="backHome">
+
+            <i class="fa-solid fa-house"></i>
+
+            Back to Home
+
+        </button>
+
+    </div>
+
+</div>
+
 <footer>
 
     <p>© 2026 Tasty Bites Restaurant</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 

@@ -482,42 +482,106 @@ alert("Invalid Coupon Code.");
 }
 
 /* -----------------------------
+   PAYMENT MODAL
+------------------------------*/
+
+const paymentModal = document.getElementById("paymentModal");
+const continuePayment = document.getElementById("continuePayment");
+const upiModal = document.getElementById("upiModal");
+
+const upiAmount = document.getElementById("upiAmount");
+
+const transactionId = document.getElementById("transactionId");
+
+const paymentCompleted = document.getElementById("paymentCompleted");
+
+/* -----------------------------
    CHECKOUT
 ------------------------------*/
 
-const checkoutButton=document.querySelector(".checkout-btn");
+const checkoutButton = document.querySelector(".checkout-btn");
 
 if(checkoutButton){
 
 checkoutButton.addEventListener("click",()=>{
 
-if(cart.length===0){
+    if(cart.length===0){
 
-alert("Your cart is empty!");
+        alert("Your cart is empty!");
 
-return;
+        return;
+
+    }
+
+    closeShoppingCart();
+
+    paymentModal.classList.add("active");
+
+});
 
 }
 
-const randomId = "TB" + Math.floor(100000 + Math.random() * 900000);
+/* -----------------------------
+   PAYMENT CONTINUE
+------------------------------*/
 
-orderId.textContent = randomId;
+if(continuePayment){
 
-const now = new Date();
+continuePayment.addEventListener("click",()=>{
 
-document.getElementById("orderDate").textContent =
-now.toLocaleDateString();
+    const selectedPayment =
+    document.querySelector(
+    'input[name="paymentOption"]:checked'
+    ).value;
 
-document.getElementById("orderTime").textContent =
-now.toLocaleTimeString([],{
-hour:'2-digit',
-minute:'2-digit'
-});
+    document.getElementById("paymentMethod").textContent = selectedPayment;
 
-orderModal.classList.add("active");
+    paymentModal.classList.remove("active");
 
+    if(selectedPayment==="Cash"){
 
-closeShoppingCart();
+        const randomId =
+        "TB" + Math.floor(100000 + Math.random()*900000);
+
+        orderId.textContent = randomId;
+
+        const now = new Date();
+
+        document.getElementById("orderDate").textContent =
+        now.toLocaleDateString();
+
+        document.getElementById("orderTime").textContent =
+        now.toLocaleTimeString([],{
+            hour:'2-digit',
+            minute:'2-digit'
+        });
+
+        orderModal.classList.add("active");
+
+    }
+
+   else if(selectedPayment==="UPI"){
+
+    paymentModal.classList.remove("active");
+
+    let totalAmount = total.textContent;
+
+    upiAmount.textContent = totalAmount;
+
+    const txn =
+    "TXN" + Math.floor(100000000 + Math.random()*900000000);
+
+    transactionId.textContent = txn;
+
+    upiModal.classList.add("active");
+
+}
+
+else{
+
+    alert("Credit / Debit Card payment will be implemented next.");
+
+}
 
 });
 
@@ -613,3 +677,53 @@ updateCart();
 /*=========================================================
         END OF FILE
 =========================================================*/
+
+/* -----------------------------
+   HOME DELIVERY
+------------------------------*/
+
+const deliveryForm = document.getElementById("deliveryForm");
+const deliveryModal = document.getElementById("deliveryModal");
+const deliveryId = document.getElementById("deliveryId");
+const paymentMode = document.getElementById("paymentMode");
+const backHome = document.getElementById("backHome");
+
+if(deliveryForm){
+
+deliveryForm.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+const randomId =
+"DL" + Math.floor(100000 + Math.random()*900000);
+
+deliveryId.textContent = randomId;
+
+const payment =
+document.querySelector('input[name="payment"]:checked');
+
+if(payment){
+
+paymentMode.textContent = payment.value;
+
+}
+
+deliveryModal.classList.add("active");
+
+deliveryForm.reset();
+
+});
+
+}
+
+if(backHome){
+
+backHome.addEventListener("click",()=>{
+
+deliveryModal.classList.remove("active");
+
+window.location.href="index.html";
+
+});
+
+}

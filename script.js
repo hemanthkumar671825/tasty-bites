@@ -513,10 +513,21 @@ checkoutButton.addEventListener("click",()=>{
 
     }
 
-    closeShoppingCart();
+closeShoppingCart();
+
+const orderType = localStorage.getItem("orderType");
+
+if(orderType === "delivery"){
+
+    window.location.href = "delivery.html";
+
+}
+
+else{
 
     paymentModal.classList.add("active");
 
+}
 });
 
 }

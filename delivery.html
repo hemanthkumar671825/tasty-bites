@@ -71,42 +71,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         required
     ></textarea>
 
-    <h3>Payment Method</h3>
-
-    <div class="payment-method">
-
-        <label>
-            <input
-                type="radio"
-                name="payment"
-                value="Cash on Delivery"
-                checked
-            >
-            Cash on Delivery
-        </label>
-
-        <label>
-            <input
-                type="radio"
-                name="payment"
-                value="UPI"
-            >
-            UPI
-        </label>
-
-        <label>
-            <input
-                type="radio"
-                name="payment"
-                value="Credit/Debit Card"
-            >
-            Credit / Debit Card
-        </label>
-
-    </div>
+    
 
     <button type="submit" class="delivery-btn">
-        🚚 Place Door Delivery
+        Continue to payment
     </button>
 
 </form>
@@ -184,6 +152,220 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </button>
 
+    </div>
+
+</div>
+
+<!-- ================= PAYMENT MODAL ================= -->
+
+<div class="payment-modal" id="paymentModal">
+
+    <div class="payment-box">
+
+        <h2>Select Payment Method</h2>
+
+        <p>
+
+            Please choose your preferred payment option.
+
+        </p>
+
+        <div class="payment-options">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Cash"
+                    checked
+                >
+
+                Cash
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="UPI"
+                >
+
+                UPI
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Credit / Debit Card"
+                >
+
+                Credit / Debit Card
+
+            </label>
+
+        </div>
+
+        <button id="continuePayment">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= UPI PAYMENT MODAL ================= -->
+
+<div class="upi-modal" id="upiModal">
+
+    <div class="upi-box">
+
+        <div class="upi-logo">
+
+            <i class="fa-solid fa-qrcode"></i>
+
+        </div>
+
+        <h2>Complete UPI Payment</h2>
+
+        <p>
+
+            Scan the QR Code below using any UPI App.
+
+        </p>
+
+        <div class="upi-amount">
+
+            Amount to Pay
+
+            <strong id="upiAmount">
+
+                ₹0
+
+            </strong>
+
+        </div>
+
+        <div class="upi-qr">
+
+            <img
+            src="images/payment-qr.png"
+            alt="UPI QR Code">
+
+        </div>
+
+        <div class="upi-id">
+
+            <span>UPI ID</span>
+
+            <strong>
+
+                tastybites@upi
+
+            </strong>
+
+        </div>
+
+        <div class="upi-transaction">
+
+            <span>Transaction ID</span>
+
+            <strong id="transactionId">
+
+                TXN000000000
+
+            </strong>
+
+        </div>
+
+        <button id="paymentCompleted">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Payment Completed
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= ORDER CONFIRMATION MODAL ================= -->
+
+<div class="order-modal" id="orderModal">
+
+    <div class="order-modal-box">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <h2>Order Confirmed!</h2>
+
+        <p>
+            Thank you for choosing
+            <strong>Tasty Bites Restaurant</strong>.
+        </p>
+
+        <div class="order-info">
+
+            <div class="info-row">
+                <span>Order ID</span>
+                <strong id="orderId">TB000001</strong>
+            </div>
+
+            <div class="info-row">
+                 <span>Estimated Time</span>
+                 <strong>30 - 40 Minutes</strong>
+             </div>
+
+             <div class="info-row">
+    <span>Payment Method</span>
+    <strong id="paymentMethod">
+        Cash
+    </strong>
+</div>
+
+            <div class="info-row">
+                 <span>Order Date</span>
+                 <strong id="orderDate"></strong>
+             </div>
+
+            <div class="info-row">
+                 <span>Order Time</span>
+                 <strong id="orderTime"></strong>
+             </div>
+            <div class="info-row">
+                <span>Status</span>
+                <strong id="orderStatus">Preparing Your Order</strong>
+            </div>
+
+        </div>
+
+        <div class="thank-message">
+
+    We appreciate your order ❤️
+
+    <br><br>
+
+    Our chefs have started preparing your meal.
+
+</div>
+
+        <button id="continueShopping">
+
+         <i class="fa-solid fa-utensils"></i>
+
+         Continue Ordering
+
+        </button>
     </div>
 
 </div>

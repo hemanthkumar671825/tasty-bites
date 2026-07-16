@@ -33,17 +33,37 @@
 
 </header>
 
+<!-- ==========================
+     BOOKING INFORMATION
+========================== -->
+
+<div class="booking-info" id="bookingInfo" style="display:none;">
+
+    <h2>🍽️ Welcome!</h2>
+
+    <p><strong>Customer:</strong> <span id="displayCustomer"></span></p>
+
+    <p><strong>Booking ID:</strong> <span id="displayBookingId"></span></p>
+
+    <p><strong>Table Number:</strong> <span id="displayTable"></span></p>
+
+    <p><strong>Guests:</strong> <span id="displayGuests"></span></p>
+
+    <p>Enjoy your meal at <strong>Tasty Bites!</strong> ❤️</p>
+
+</div>
+
 <section class="booking-page">
 
     <div class="booking-overlay">
 
         <div class="booking-form-box">
 
-            <h2>Table Booking</h2>
+            <h2>Dine-In Table Reservation</h2>
 
-            <p>Reserve your table for special moments</p>
+            <p>Reserve your table and enjoy a wonderful dining experience at Tasty Bites.</p>
 
-            <form action="/booking" method="POST">
+            <form id="bookingForm">
 
                 <input 
                     type="text"
@@ -65,10 +85,9 @@
                     required
                 >
 
-                <button type="submit">
-                    Book Table
+                <button type="submit" id="bookTableBtn">
+                     Book a Table
                 </button>
-
             </form>
 
         </div>
@@ -77,11 +96,106 @@
 
 </section>
 
+<!-- ==========================
+     BOOKING SUCCESS MODAL
+========================== -->
+
+<div class="booking-success-modal" id="bookingSuccessModal">
+
+    <div class="booking-success-box">
+
+        <div class="success-icon">✅</div>
+
+        <h2>Table Booked Successfully!</h2>
+
+        <p>
+            Thank you for choosing <strong>Tasty Bites</strong>.
+        </p>
+
+        <div class="booking-details">
+
+            <p>
+                <strong>Booking ID:</strong>
+                <span id="bookingId">TBR000000</span>
+            </p>
+
+            <p>
+                 <strong>Table Number:</strong>
+                 <span id="tableNumber">T01</span>
+            </p>
+
+            <p>
+                Your table has been reserved successfully.
+            </p>
+
+            <p>
+                Redirecting to Menu...
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
 <footer>
 
     <p>© 2026 Tasty Bites Restaurant</p>
 
 </footer>
+
+<script>
+
+const bookingForm = document.getElementById("bookingForm");
+
+const bookingSuccessModal =
+document.getElementById("bookingSuccessModal");
+
+const bookingId =
+document.getElementById("bookingId");
+
+const tableNumber =
+document.getElementById("tableNumber");
+
+bookingForm.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    const randomBookingId =
+"TBR" + Math.floor(100000 + Math.random()*900000);
+
+bookingId.textContent = randomBookingId;
+
+// Generate Table Number (1–20)
+const tableNo =
+"T" + String(Math.floor(Math.random() * 20) + 1).padStart(2, "0");
+
+tableNumber.textContent = tableNo;
+
+// Save booking details
+
+localStorage.setItem("customerName",
+document.querySelector('input[name="name"]').value);
+
+localStorage.setItem("bookingId", randomBookingId);
+
+localStorage.setItem("tableNumber", tableNo);
+
+localStorage.setItem("guestCount",
+document.querySelector('input[name="persons"]').value);
+
+    bookingSuccessModal.classList.add("active");
+    setTimeout(()=>{
+
+    localStorage.setItem("orderType","dinein");
+
+    window.location.href="order.html";
+
+},3000);
+
+});
+
+</script>
 
 </body>
 

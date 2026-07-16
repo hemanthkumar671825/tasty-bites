@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment | Tasty Bites</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>Tasty Bites</h1>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="services.html">Services</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<!-- ================= PAYMENT PAGE ================= -->
+
+<section class="payment-page">
+
+    <div class="payment-container">
+
+        <h2>
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Secure Payment
+
+        </h2>
+
+        <p>
+
+            Complete your payment securely.
+
+        </p>
+
+        <div class="payment-summary">
+
+            <h3>Order Summary</h3>
+
+            <p>
+
+                Order Type :
+                <strong id="orderTypeText"></strong>
+
+            </p>
+
+            <p>
+
+                Amount :
+                <strong id="paymentAmount">
+
+                    ₹0
+
+                </strong>
+
+            </p>
+
+        </div>
+
+        <h3>Select Payment Method</h3>
+
+        <div class="payment-options">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Cash"
+                    checked>
+
+                Cash
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="UPI">
+
+                UPI
+
+            </label>
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="paymentOption"
+                    value="Card">
+
+                Credit / Debit Card
+
+            </label>
+
+        </div>
+
+        <button id="continuePayment">
+
+            Continue
+
+        </button>
+        <!-- ================= UPI SECTION ================= -->
+
+<div id="upiSection" style="display:none; margin-top:25px;">
+
+    <h3>Scan QR Code</h3>
+
+    <img
+        src="images/payment-qr.png"
+        alt="UPI QR"
+        style="width:220px;display:block;margin:auto;">
+
+    <p style="text-align:center;margin-top:15px;">
+
+        UPI ID:
+        <strong>tastybites@upi</strong>
+
+    </p>
+
+    <button id="upiComplete">
+
+        Payment Completed
+
+    </button>
+
+</div>
+
+<!-- ================= CARD SECTION ================= -->
+
+<div id="cardSection" style="display:none; margin-top:25px;">
+
+    <h3>Card Payment</h3>
+
+    <input
+        type="text"
+        placeholder="Card Number">
+
+    <input
+        type="text"
+        placeholder="Card Holder Name">
+
+    <input
+        type="text"
+        placeholder="Expiry (MM/YY)">
+
+    <input
+        type="password"
+        placeholder="CVV">
+
+    <button id="cardPay">
+
+        Pay Securely
+
+    </button>
+
+</div>
+
+    </div>
+
+</section>
+
+<!--<script src="script.js"></script>-->
+<script>
+
+const continuePayment =
+document.getElementById("continuePayment");
+
+const upiSection =
+document.getElementById("upiSection");
+
+const cardSection =
+document.getElementById("cardSection");
+
+continuePayment.addEventListener("click",()=>{
+
+    const paymentMethod =
+    document.querySelector(
+    'input[name="paymentOption"]:checked'
+    ).value;
+
+    upiSection.style.display="none";
+
+    cardSection.style.display="none";
+
+    if(paymentMethod==="Cash"){
+
+        alert("Cash Payment Selected");
+
+    }
+
+    else if(paymentMethod==="UPI"){
+
+        upiSection.style.display="block";
+
+    }
+
+    else{
+
+        cardSection.style.display="block";
+
+    }
+
+});
+
+</script>
+</body>
+
+</html>

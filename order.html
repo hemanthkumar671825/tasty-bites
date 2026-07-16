@@ -61,6 +61,40 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </header>
 
+<!-- ==========================
+     BOOKING INFORMATION
+========================== -->
+
+<div class="booking-info" id="bookingInfo" style="display:none;">
+
+    <h2>🍽️ Welcome!</h2>
+
+    <p>
+        <strong>Customer:</strong>
+        <span id="displayCustomer"></span>
+    </p>
+
+    <p>
+        <strong>Booking ID:</strong>
+        <span id="displayBookingId"></span>
+    </p>
+
+    <p>
+        <strong>Table Number:</strong>
+        <span id="displayTable"></span>
+    </p>
+
+    <p>
+        <strong>Guests:</strong>
+        <span id="displayGuests"></span>
+    </p>
+
+    <p>
+        Enjoy your meal at <strong>Tasty Bites!</strong> ❤️
+    </p>
+
+</div>
+
 <!-- ================= HERO SECTION ================= -->
 
 <section class="order-hero">
@@ -977,11 +1011,11 @@ Proceed to Checkout
 
         <button id="continueShopping">
 
-         <i class="fa-solid fa-bag-shopping"></i>
+         <i class="fa-solid fa-utensils"></i>
 
-         Continue Shopping
+         Continue Ordering
 
-         </button>
+        </button>
     </div>
 
 </div>
@@ -1009,6 +1043,32 @@ Fresh Food • Fast Delivery • Great Taste
 </footer>
 
 <script src="script.js"></script>
+
+<script>
+
+const orderType = localStorage.getItem("orderType");
+
+if(orderType === "dinein"){
+
+    const customerName = localStorage.getItem("customerName");
+
+    document.getElementById("bookingInfo").style.display = "block";
+
+    document.getElementById("displayCustomer").textContent =
+    customerName;
+
+    document.getElementById("displayBookingId").textContent =
+    localStorage.getItem("bookingId");
+
+    document.getElementById("displayTable").textContent =
+    localStorage.getItem("tableNumber");
+
+    document.getElementById("displayGuests").textContent =
+    localStorage.getItem("guestCount");
+
+}
+
+</script>
 
 </body>
 

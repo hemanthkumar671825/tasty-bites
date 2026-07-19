@@ -1,0 +1,521 @@
+/*=========================================================
+                    TASTY BITES
+                     BILL PAGE
+=========================================================*/
+
+/* -----------------------------
+   RESET
+------------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* -----------------------------
+   BODY
+------------------------------*/
+
+body{
+
+    background:linear-gradient(135deg,#fff8f0,#ffe4c4);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* -----------------------------
+   MAIN CONTAINER
+------------------------------*/
+
+.bill-container{
+
+    width:100%;
+
+    max-width:850px;
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+
+}
+
+/* -----------------------------
+   HEADINGS
+------------------------------*/
+
+.bill-container h1{
+
+    text-align:center;
+
+    color:#d35400;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+}
+
+.bill-container h2{
+
+    text-align:center;
+
+    color:#444;
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+hr{
+
+    margin:20px 0;
+
+}
+/*=========================================================
+                BILL INFORMATION
+=========================================================*/
+
+.info-box{
+
+    background:#fff5eb;
+
+    border-left:5px solid #ff9800;
+
+    padding:18px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
+
+}
+
+.info-box p{
+
+    margin:10px 0;
+
+    font-size:16px;
+
+    color:#333;
+
+}
+
+.info-box strong{
+
+    color:#d35400;
+
+}
+
+/*=========================================================
+                    ORDER TABLE
+=========================================================*/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:25px;
+
+    margin-bottom:25px;
+
+}
+
+table th{
+
+    background:#d35400;
+
+    color:#ffffff;
+
+    padding:14px;
+
+    font-size:16px;
+
+    text-align:center;
+
+}
+
+table td{
+
+    border:1px solid #dddddd;
+
+    padding:12px;
+
+    font-size:15px;
+
+    text-align:center;
+
+}
+
+table tbody tr:nth-child(even){
+
+    background:#fff8f0;
+
+}
+
+table tbody tr:hover{
+
+    background:#ffe8cc;
+
+    transition:0.3s;
+
+}
+
+/*=========================================================
+                TOTAL SECTION
+=========================================================*/
+
+.total-section{
+
+    margin-top:20px;
+
+    border-top:2px solid #eeeeee;
+
+    padding-top:20px;
+
+}
+
+.total-section p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:12px 0;
+
+    font-size:17px;
+
+}
+
+.total-section strong{
+
+    color:#d35400;
+
+    font-size:18px;
+
+}
+/*=========================================================
+                RESTAURANT INFORMATION
+=========================================================*/
+
+.restaurant-info{
+
+    margin-top:30px;
+
+    padding:20px;
+
+    background:#fff5eb;
+
+    border-left:5px solid #d35400;
+
+    border-radius:8px;
+
+}
+
+.restaurant-info h3{
+
+    color:#d35400;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+.restaurant-info p{
+
+    margin:8px 0;
+
+    color:#444;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================================
+                    BUTTON SECTION
+=========================================================*/
+
+.bill-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.bill-buttons button{
+
+    flex:1;
+
+    min-width:180px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+/*=========================================================
+                DOWNLOAD BILL BUTTON
+=========================================================*/
+
+#downloadBill{
+
+    background:#28a745;
+
+    color:#ffffff;
+
+}
+
+#downloadBill:hover{
+
+    background:#218838;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================================
+                GIVE FEEDBACK BUTTON
+=========================================================*/
+
+#giveFeedback{
+
+    background:#ff9800;
+
+    color:#ffffff;
+
+}
+
+#giveFeedback:hover{
+
+    background:#f57c00;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================================
+                BACK TO HOME BUTTON
+=========================================================*/
+
+#backHome{
+
+    background:#007bff;
+
+    color:#ffffff;
+
+}
+
+#backHome:hover{
+
+    background:#0056b3;
+
+    transform:translateY(-2px);
+
+}
+/*=========================================================
+                RESPONSIVE DESIGN
+=========================================================*/
+
+@media (max-width:768px){
+
+    body{
+
+        padding:15px;
+
+    }
+
+    .bill-container{
+
+        padding:20px;
+
+    }
+
+    .bill-container h1{
+
+        font-size:28px;
+
+    }
+
+    .bill-container h2{
+
+        font-size:20px;
+
+    }
+
+    .info-box{
+
+        padding:15px;
+
+    }
+
+    .info-box p{
+
+        font-size:15px;
+
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+
+        white-space:nowrap;
+
+    }
+
+    table th{
+
+        font-size:15px;
+
+        padding:12px;
+
+    }
+
+    table td{
+
+        font-size:14px;
+
+        padding:10px;
+
+    }
+
+    .total-section p{
+
+        font-size:16px;
+
+    }
+
+    .restaurant-info{
+
+        padding:15px;
+
+    }
+
+    .restaurant-info h3{
+
+        font-size:20px;
+
+    }
+
+    .restaurant-info p{
+
+        font-size:15px;
+
+    }
+
+    .bill-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .bill-buttons button{
+
+        width:100%;
+
+        min-width:100%;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .bill-container{
+
+        padding:15px;
+
+    }
+
+    .bill-container h1{
+
+        font-size:24px;
+
+    }
+
+    .bill-container h2{
+
+        font-size:18px;
+
+    }
+
+    .info-box p{
+
+        font-size:14px;
+
+    }
+
+    table th,
+    table td{
+
+        font-size:13px;
+
+    }
+
+    .total-section p{
+
+        font-size:15px;
+
+    }
+
+    .restaurant-info h3{
+
+        font-size:18px;
+
+    }
+
+    .restaurant-info p{
+
+        font-size:14px;
+
+    }
+
+    .bill-buttons button{
+
+        font-size:16px;
+
+        padding:14px;
+
+    }
+
+}
+
+/*=========================================================
+                    END OF FILE
+=========================================================*/

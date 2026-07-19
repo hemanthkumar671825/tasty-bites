@@ -10,6 +10,7 @@
     <title>Payment | Tasty Bites</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -147,7 +148,7 @@
 
     <button id="upiComplete">
 
-        Payment Completed
+        Complete payment
 
     </button>
 
@@ -183,54 +184,34 @@
 
 </div>
 
+<!-- ================= PAYMENT SUCCESS ================= -->
+
+<div id="paymentSuccess" style="display:none; margin-top:25px; text-align:center;">
+
+    <h2 style="color:#28a745;">
+        🚚 Door Delivery Confirmed
+    </h2>
+
+    <p style="margin:15px 0;">
+        Thank you! Your payment has been received successfully.
+        <br><br>
+        Your delivery request has been confirmed.
+    </p>
+
+    <button id="continueOrder">
+
+        Continue
+
+    </button>
+
+    </div>
     </div>
 
 </section>
 
 <!--<script src="script.js"></script>-->
-<script>
+<script src="payment.js"> </script>
 
-const continuePayment =
-document.getElementById("continuePayment");
-
-const upiSection =
-document.getElementById("upiSection");
-
-const cardSection =
-document.getElementById("cardSection");
-
-continuePayment.addEventListener("click",()=>{
-
-    const paymentMethod =
-    document.querySelector(
-    'input[name="paymentOption"]:checked'
-    ).value;
-
-    upiSection.style.display="none";
-
-    cardSection.style.display="none";
-
-    if(paymentMethod==="Cash"){
-
-        alert("Cash Payment Selected");
-
-    }
-
-    else if(paymentMethod==="UPI"){
-
-        upiSection.style.display="block";
-
-    }
-
-    else{
-
-        cardSection.style.display="block";
-
-    }
-
-});
-
-</script>
 </body>
 
 </html>

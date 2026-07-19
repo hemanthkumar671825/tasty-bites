@@ -512,7 +512,38 @@ checkoutButton.addEventListener("click",()=>{
         return;
 
     }
+// Save Cart
 
+localStorage.setItem(
+    "cart",
+    JSON.stringify(cart)
+);
+
+// Save Total
+
+localStorage.setItem(
+    "totalAmount",
+    total.textContent
+);
+
+// Save GST
+
+localStorage.setItem(
+    "gstAmount",
+    gst.textContent
+);
+
+// Save Discount
+
+localStorage.setItem(
+    "discountAmount",
+    "₹" + Math.round(
+        cart.reduce(
+            (sum,item)=>sum+item.price*item.quantity,
+            0
+        ) * discount /100
+    )
+);
 closeShoppingCart();
 
 const orderType = localStorage.getItem("orderType");
@@ -521,11 +552,9 @@ if(orderType === "delivery"){
 
     window.location.href = "delivery.html";
 
-}
+}else{
 
-else{
-
-    paymentModal.classList.add("active");
+    window.location.href = "payment.html";
 
 }
 });
@@ -599,30 +628,39 @@ else{
 }
 
 /* -----------------------------
-   CONTINUE SHOPPING
+   CONTINUE ORDERING
 ------------------------------*/
 
-if(continueShopping){
+if (continueShopping) {
 
-continueShopping.addEventListener("click",()=>{
+    continueShopping.addEventListener("click", () => {
 
-    orderModal.classList.remove("active");
+        // Close the order confirmation modal
+        orderModal.classList.remove("active");
 
-    cart = [];
+        // Keep the cart and coupon unchanged.
+        // Customer can continue adding more food.
 
-    discount = 0;
+    });
 
-    couponApplied = false;
+}
 
-    if(coupon){
+/* -----------------------------
+   VIEW BILL
+------------------------------*/
 
-        coupon.value = "";
+const viewBill = document.getElementById("viewBill");
 
-    }
+if (viewBill) {
 
-    updateCart();
+    viewBill.addEventListener("click", () => {
 
-});
+        orderModal.classList.remove("active");
+
+        window.location.href = "bill.html";
+
+
+    });
 
 }
 
@@ -681,7 +719,15 @@ card.style.display="none";
 
 window.addEventListener("load",()=>{
 
-updateCart();
+    const savedCart = localStorage.getItem("cart");
+
+    if(savedCart){
+        cart = JSON.parse(savedCart);
+    }else{
+        cart = [];
+    }
+
+    updateCart();
 
 });
 
@@ -697,7 +743,8 @@ const deliveryForm = document.getElementById("deliveryForm");
 const deliveryModal = document.getElementById("deliveryModal");
 const deliveryId = document.getElementById("deliveryId");
 const paymentMode = document.getElementById("paymentMode");
-const backHome = document.getElementById("backHome");
+const continueDeliveryPayment =
+document.getElementById("continueDeliveryPayment");
 
 if(deliveryForm){
 
@@ -719,21 +766,20 @@ paymentMode.textContent = payment.value;
 
 }
 
-deliveryModal.classList.add("active");
-
 deliveryForm.reset();
 
+window.location.href = "payment.html";
 });
 
 }
 
-if(backHome){
+if(continueDeliveryPayment){
 
-backHome.addEventListener("click",()=>{
+continueDeliveryPayment.addEventListener("click",()=>{
 
-deliveryModal.classList.remove("active");
+    deliveryModal.classList.remove("active");
 
-window.location.href="index.html";
+    window.location.href="payment.html";
 
 });
 

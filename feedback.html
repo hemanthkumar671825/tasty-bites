@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasty Bites - Customer Feedback</title>
+
+    <link rel="stylesheet" href="feedback.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="feedback-container">
+
+        <h1>⭐ Tasty Bites ⭐</h1>
+
+        <h2>Customer Feedback</h2>
+
+        <hr>
+
+        <div class="info-box">
+
+            <p>
+                <strong>Order ID :</strong>
+                <span id="orderId"></span>
+            </p>
+
+            <p>
+                <strong>Date :</strong>
+                <span id="feedbackDate"></span>
+            </p>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Your Name (Optional)</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Rate Your Experience <span class="required">*</span></label>
+
+            <div class="star-rating">
+
+                <i class="fa-regular fa-star star" data-value="1"></i>
+                <i class="fa-regular fa-star star" data-value="2"></i>
+                <i class="fa-regular fa-star star" data-value="3"></i>
+                <i class="fa-regular fa-star star" data-value="4"></i>
+                <i class="fa-regular fa-star star" data-value="5"></i>
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Choose Your Feeling</label>
+
+            <div class="emoji-container">
+
+                <span class="emoji" data-value="😍">😍</span>
+                <span class="emoji" data-value="😋">😋</span>
+                <span class="emoji" data-value="😊">😊</span>
+                <span class="emoji" data-value="😐">😐</span>
+                <span class="emoji" data-value="😞">😞</span>
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Write Your Review (Optional)</label>
+
+            <textarea
+                id="review"
+                rows="6"
+                maxlength="300"
+                placeholder="Share your experience with us..."></textarea>
+
+            <small>
+                Maximum 300 Characters
+            </small>
+
+        </div>
+
+        <button id="submitFeedback">
+
+            Submit Feedback
+
+        </button>
+
+    </div>
+
+    <script src="feedback.js"></script>
+
+</body>
+
+</html>

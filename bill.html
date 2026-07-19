@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasty Bites | Bill</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+
+</head>
+
+<body>
+
+<section class="payment-page">
+
+<div class="payment-container">
+
+<h1>🍽️ Tasty Bites</h1>
+
+<h2>Tax Invoice / Bill</h2>
+
+<hr>
+
+<p><strong>Bill No :</strong> <span id="billNo"></span></p>
+
+<p><strong>Order ID :</strong> <span id="orderId"></span></p>
+
+<p><strong>Date & Time :</strong> <span id="dateTime"></span></p>
+
+<p><strong>Customer Name :</strong> <span id="customerName">Guest</span></p>
+
+<p><strong>Mobile Number :</strong> <span id="mobileNumber">-</span></p>
+
+<hr>
+
+<h3>Customer Order Information</h3>
+
+<p>
+    <strong>Order Type :</strong>
+    <span id="orderType"></span>
+</p>
+
+<p>
+    <strong>Table Number :</strong>
+    <span id="tableNumber"></span>
+</p>
+
+<p>
+    <strong>Delivery Address :</strong>
+    <span id="deliveryAddress"></span>
+</p>
+
+<p>
+    <strong>Payment Method :</strong>
+    <span id="paymentMethod"></span>
+</p>
+
+<p>
+    <strong>Payment Status :</strong>
+    <span style="color:green;">Paid</span>
+</p>
+
+<hr>
+
+<h3>Order Details</h3>
+
+<table width="100%" border="1" cellspacing="0" cellpadding="8">
+
+<thead>
+
+<tr>
+
+<th>Item Name</th>
+
+<th>Quantity</th>
+
+<th>Price</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="billItems">
+
+</tbody>
+
+</table>
+
+<hr>
+
+<p>
+    <strong>Subtotal :</strong>
+    <span id="subTotal">₹690.00</span>
+</p>
+
+<p>
+    <strong>Discount :</strong>
+    <span id="discount">₹0.00</span>
+</p>
+
+<p>
+    <strong>GST (5%) :</strong>
+    <span id="gst">₹34.50</span>
+</p>
+
+<h3>
+    Grand Total :
+    <span id="grandTotal">₹724.50</span>
+</h3>
+
+<hr>
+
+<div class="bill-footer">
+
+    <h3>Restaurant Contact</h3>
+
+    <p><strong>Phone :</strong> +91 98765 43210</p>
+
+    <p><strong>Email :</strong> support@tastybites.com</p>
+
+    <p>
+        <strong>Address :</strong><br>
+        Tasty Bites Restaurant<br>
+        Coimbatore, Tamil Nadu
+    </p>
+
+    <hr>
+
+    <p style="text-align:center; font-size:18px;">
+
+        ❤️ Thank You For Visiting Tasty Bites ❤️
+
+    </p>
+
+    <p style="text-align:center; color:gray;">
+
+        We hope to serve you again!
+
+    </p>
+
+    <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap; margin-top:20px;">
+
+      <div class="bill-buttons">
+
+    <button id="downloadBill">
+        Download Bill
+    </button>
+
+    <button id="giveFeedback">
+        ⭐ Give Feedback
+    </button>
+
+    <button id="backHome">
+        Back To Home
+    </button>
+
+</div>        
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="bill.js"></script>
+
+</body>
+
+</html>

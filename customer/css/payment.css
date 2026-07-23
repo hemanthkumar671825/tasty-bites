@@ -1,0 +1,147 @@
+/* ================= PAYMENT PAGE ================= */
+
+.payment-page{
+    display:flex;
+    justify-content:center;
+    padding:50px 20px;
+}
+
+.payment-container{
+    background:#fff;
+    width:100%;
+    max-width:480px;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.payment-container h2{
+    color:#b22222;
+    font-size:26px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.payment-container > p{
+    color:#555;
+    margin-top:8px;
+    margin-bottom:20px;
+}
+
+/* ================= ORDER SUMMARY ================= */
+
+.payment-summary{
+    background:#fff8f0;
+    border:1px solid #f0ddc8;
+    border-radius:8px;
+    padding:15px 20px;
+    margin-bottom:20px;
+}
+
+.payment-summary h3{
+    color:#b22222;
+    margin-bottom:10px;
+}
+
+.payment-summary p{
+    margin:6px 0;
+    font-size:15px;
+    color:#333;
+}
+
+.payment-summary strong{
+    color:#b22222;
+}
+
+/* ================= PAYMENT METHOD OPTIONS ================= */
+
+.payment-container h3{
+    margin-bottom:12px;
+    color:#333;
+    font-size:18px;
+}
+
+.payment-options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-bottom:20px;
+}
+
+.payment-options label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.2s;
+}
+
+.payment-options label:hover{
+    border-color:orange;
+    background:#fff8f0;
+}
+
+.payment-options input[type="radio"]{
+    accent-color:#b22222;
+    width:18px;
+    height:18px;
+}
+
+/* ================= BUTTONS ================= */
+
+.payment-container button{
+    width:100%;
+    margin-top:10px;
+}
+
+/* ================= UPI SECTION ================= */
+
+#upiSection h3,
+#cardSection h3{
+    color:#b22222;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#upiSection img{
+    border:1px solid #eee;
+    border-radius:8px;
+    padding:10px;
+    background:#fff;
+}
+
+/* ================= CARD SECTION ================= */
+
+#cardSection input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:15px;
+}
+
+#cardSection input:focus{
+    outline:none;
+    border-color:orange;
+}
+
+/* ================= PAYMENT SUCCESS ================= */
+
+#paymentSuccess p{
+    color:#444;
+    line-height:1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:520px){
+    .payment-container{
+        padding:25px 20px;
+    }
+}

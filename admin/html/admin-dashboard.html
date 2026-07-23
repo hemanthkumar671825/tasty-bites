@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tasty Bites | Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/admin-dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <h2>Tasty Bites</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chair"></i>
+                Table Bookings
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bell-concierge"></i>
+                Catering
+            </li>
+
+            <li>
+                <i class="fa-solid fa-users"></i>
+                Customers
+            </li>
+
+            <li>
+                <i class="fa-solid fa-star"></i>
+                Feedback
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chart-line"></i>
+                Reports
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+            <li id="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Dashboard</h1>
+
+            <div class="admin-profile">
+
+                <i class="fa-solid fa-circle-user"></i>
+
+                <span>Administrator</span>
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <h2>125</h2>
+
+                <p>Total Orders</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2>18</h2>
+
+                <p>Pending Orders</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chair"></i>
+
+                <h2>24</h2>
+
+                <p>Bookings</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <h2>₹58,000</h2>
+
+                <p>Revenue</p>
+
+            </div>
+
+        </section>
+
+        <!-- Recent Orders -->
+
+        <section class="recent-orders">
+
+            <h2>Recent Orders</h2>
+
+            <table>
+
+                <thead>
+
+                <tr>
+
+                    <th>Order ID</th>
+
+                    <th>Customer</th>
+
+                    <th>Order Type</th>
+
+                    <th>Payment</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+
+                    <td>TB1001</td>
+
+                    <td>Rahul</td>
+
+                    <td>Delivery</td>
+
+                    <td>UPI</td>
+
+                    <td>Completed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>TB1002</td>
+
+                    <td>Priya</td>
+
+                    <td>Dine-In</td>
+
+                    <td>Cash</td>
+
+                    <td>Preparing</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>TB1003</td>
+
+                    <td>Karthik</td>
+
+                    <td>Take Away</td>
+
+                    <td>Card</td>
+
+                    <td>Pending</td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/admin-dashboard.js"></script>
+
+</body>
+</html>

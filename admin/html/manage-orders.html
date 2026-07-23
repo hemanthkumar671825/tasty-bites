@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tasty Bites | Manage Orders</title>
+
+    <link rel="stylesheet"
+          href="../css/manage-orders.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <h2>Tasty Bites</h2>
+
+        </div>
+
+        <ul>
+
+            <li onclick="location.href='admin-dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+            <li class="active">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                Orders
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-chair"></i>
+
+                Table Bookings
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-bell-concierge"></i>
+
+                Catering
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-users"></i>
+
+                Customers
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-star"></i>
+
+                Feedback
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Reports
+
+            </li>
+
+            <li>
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </li>
+
+        </ul>
+
+        <div class="logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>Manage Orders</h1>
+
+            <div class="admin-profile">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <span>Administrator</span>
+
+            </div>
+
+        </header>
+
+        <!-- Search & Filter -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by Order ID or Customer Name">
+
+            </div>
+
+            <select id="statusFilter">
+
+                <option value="all">All Orders</option>
+
+                <option value="Pending">Pending</option>
+
+                <option value="Preparing">Preparing</option>
+
+                <option value="Ready">Ready</option>
+
+                <option value="Completed">Completed</option>
+
+                <option value="Cancelled">Cancelled</option>
+
+            </select>
+
+        </section>
+
+        <!-- Orders Table -->
+
+        <section class="orders-section">
+
+            <table id="ordersTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Order ID</th>
+
+                        <th>Customer</th>
+
+                        <th>Order Type</th>
+
+                        <th>Amount</th>
+
+                        <th>Payment</th>
+
+                        <th>Status</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>TB1001</td>
+
+                        <td>Rahul</td>
+
+                        <td>Delivery</td>
+
+                        <td>₹450</td>
+
+                        <td>UPI</td>
+
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+
+                                View
+
+                            </button>
+
+                            <button class="update-btn">
+
+                                Update
+
+                            </button>
+
+                            <button class="delete-btn">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>TB1002</td>
+
+                        <td>Priya</td>
+
+                        <td>Dine-In</td>
+
+                        <td>₹820</td>
+
+                        <td>Cash</td>
+
+                        <td>
+
+                            <span class="status preparing">
+
+                                Preparing
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+
+                                View
+
+                            </button>
+
+                            <button class="update-btn">
+
+                                Update
+
+                            </button>
+
+                            <button class="delete-btn">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>TB1003</td>
+
+                        <td>Karthik</td>
+
+                        <td>Take Away</td>
+
+                        <td>₹360</td>
+
+                        <td>Card</td>
+
+                        <td>
+
+                            <span class="status completed">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="view-btn">
+
+                                View
+
+                            </button>
+
+                            <button class="update-btn">
+
+                                Update
+
+                            </button>
+
+                            <button class="delete-btn">
+
+                                Delete
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/manage-orders.js"></script>
+
+</body>
+
+</html>
